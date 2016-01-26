@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Zoo">
+  <ClassDiagramComponents>
+    <Class name="Mainclass" package="" visibility="public" xPosition="1110.0" yPosition="53.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Zoo" package="" visibility="public" xPosition="869.0" yPosition="53.0">
+      <Fields>
+        <Field name="zCagesNumber" type="int" visibility="private"/>
+        <Field name="zCagesArray" type="ArrayList&lt;Cage&gt;" visibility="private"/>
+        <Field name="zMaxCages" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="checkCage" returnType="int" visibility="public">
+          <Argument type="int" name="number"/>
+        </Method>
+        <Method name="addCage" returnType="Cage" visibility="public">
+          <Argument type="Cage" name="cage"/>
+        </Method>
+        <Method name="findCage" returnType="Cage" visibility="public">
+          <Argument type="String" name="type"/>
+        </Method>
+        <Method name="listCages" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Cage" package="" visibility="public" xPosition="571.0" yPosition="53.0">
+      <Fields>
+        <Field name="cAnimal" type="Animal" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Animal" name="animal"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="feedAnimal" returnType="void" visibility="public"/>
+        <Method name="getAnimal" returnType="Animal" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Animal" package="" visibility="public" isAbstract="true" xPosition="249.0" yPosition="53.0">
+      <Fields>
+        <Field name="aWeight" type="int" visibility="private"/>
+        <Field name="aName" type="String" visibility="private"/>
+        <Field name="aType" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="eat" returnType="void" visibility="public"/>
+        <Method name="nameAnimal" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="setType" returnType="void" visibility="public">
+          <Argument type="String" name="type"/>
+        </Method>
+        <Method name="getType" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Pegasus" package="" visibility="public" xPosition="305.0" yPosition="348.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Bird" package="" visibility="public" xPosition="60.0" yPosition="348.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Horse" package="" visibility="public" xPosition="571.0" yPosition="348.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Interface name="Fly" package="" visibility="public" xPosition="305.0" yPosition="556.0">
+      <Methods>
+        <Method name="fly" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Interface name="Run" package="" visibility="public" xPosition="571.0" yPosition="556.0">
+      <Methods>
+        <Method name="run" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Interface name="Shout" package="" visibility="public" xPosition="897.0" yPosition="556.0">
+      <Methods>
+        <Method name="shout" returnType="void" visibility="public">
+          <Argument type="String" name="shout"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Class name="Griffin" package="" visibility="public" xPosition="897.0" yPosition="348.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Platypus" package="" visibility="public" xPosition="1161.0" yPosition="348.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Interface name="LayEggs" package="" visibility="public" xPosition="1161.0" yPosition="556.0">
+      <Methods>
+        <Method name="layEggs" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Pegasus" target="Fly"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Platypus" target="Shout"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Platypus" target="LayEggs"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Horse" target="Run"/>
+    <IsRelation name="is" source="Bird" target="Animal"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Griffin" target="Fly"/>
+    <HasRelation name="cAnimal" source="Cage" target="Animal" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Griffin" target="Run"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Platypus" target="Run"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Pegasus" target="Run"/>
+    <IsRelation name="is" source="Pegasus" target="Animal"/>
+    <HasRelation name="zCagesArray" source="Zoo" target="Cage" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <UseRelation name="" source="Mainclass" target="Zoo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Griffin" target="Animal"/>
+    <IsRelation name="is" source="Horse" target="Animal"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Bird" target="Fly"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Griffin" target="Shout"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
