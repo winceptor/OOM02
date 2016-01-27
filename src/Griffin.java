@@ -19,4 +19,12 @@ public class Griffin extends Animal implements Fly, Run, Shout {
     public void shout(String shout) {
         System.out.print("Griffin shouts: " + shout + "\n");
     }
+    
+    @Override
+    public void doTricks()
+    {
+        this.fly();
+        this.run();
+        this.shout("Roar roar!");
+    }
 }

@@ -6,20 +6,19 @@ public class Mainclass {
         Bird newBird = new Bird();
         Cage newCage1 = new Cage(newBird);
         newZoo.addCage(newCage1);
-        newBird.fly();
+        newBird.doTricks();
         System.out.println();
         
         Horse newHorse = new Horse();
         Cage newCage2 = new Cage(newHorse);
         newZoo.addCage(newCage2);
-        newHorse.run();
+        newHorse.doTricks();
         System.out.println();
         
         Pegasus newPegasus = new Pegasus();
         Cage newCage3 = new Cage(newPegasus);
         newZoo.addCage(newCage3);
-        newPegasus.fly();
-        newPegasus.run();
+        newPegasus.doTricks();
         System.out.println();
         
         Cage cage2 = newZoo.checkCage(2);
@@ -35,14 +34,14 @@ public class Mainclass {
         Animal happyBird;
         happyBird = newZoo.findCage("Bird").getAnimal();
         happyBird.nameAnimal("Happy");
+        happyBird.doTricks();
+        happyBird.eat();
         System.out.println();
         
         Griffin newGriffin = new Griffin();
         Cage newCage4 = new Cage(newGriffin);
         newZoo.addCage(newCage4);
-        newGriffin.fly();
-        newGriffin.run();
-        newGriffin.shout("Roar!");
+        newGriffin.doTricks();
         System.out.println();
         
         Platypus newPlatypus = new Platypus();

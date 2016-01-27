@@ -9,4 +9,10 @@ public class Horse extends Animal implements Run {
     public void run() {
         System.out.print("Horse runs around.\n");
     }
+    
+    @Override
+    public void doTricks()
+    {
+        this.run();
+    }
 }

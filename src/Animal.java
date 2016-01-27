@@ -33,4 +33,9 @@ public abstract class Animal {
     public String getType() {
         return this.aType;
     }
+    
+    public void doTricks()
+    {
+        System.out.print(this.aName + " " + this.aType + " needs to learn some tricks first!\n");
+    }
 }

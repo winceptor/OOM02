@@ -19,4 +19,12 @@ public class Platypus extends Animal implements Shout, LayEggs, Run {
     public void shout(String shout) {
         System.out.print("Platypus shouts: " + shout + "\n");
     }
+    
+    @Override
+    public void doTricks()
+    {
+        this.run();
+        this.shout("Skwee!");
+        this.layEggs();
+    }
 }

@@ -9,4 +9,10 @@ public class Bird extends Animal implements Fly {
     public void fly() {
         System.out.print("Bird flies a bit.\n");
     }
+    
+    @Override
+    public void doTricks()
+    {
+        this.fly();
+    }
 }

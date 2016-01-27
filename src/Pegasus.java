@@ -14,4 +14,11 @@ public class Pegasus extends Animal implements Fly, Run {
     public void run() {
         System.out.print("Pegasus runs in circles.\n");
     }
+    
+    @Override
+    public void doTricks()
+    {
+        this.fly();
+        this.run();
+    }
 }
