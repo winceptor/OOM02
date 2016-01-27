@@ -13,8 +13,8 @@ public abstract class Animal {
     }
 
     public void eat() {
-        System.out.print(this.aName + " " + this.aType + " eats something and weights now: " + this.aWeight + "kg \n");
         this.aWeight = this.aWeight + 1;
+        System.out.print(this.aName + " " + this.aType + " eats something and weights now: " + this.aWeight + "kg \n");
     }
 
     public void nameAnimal(String name) {
