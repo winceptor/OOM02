@@ -35,6 +35,8 @@ public class Mainclass {
         happyBird = newZoo.findCage("Bird").getAnimal();
         happyBird.nameAnimal("Happy");
         happyBird.doTricks();
+        Bird bird = (Bird) happyBird;
+        bird.fly();
         happyBird.eat();
         System.out.println();
         
